@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from .views import client_detail, client_list,  create_projectiii, project_list,project_detail
+from .views import client_detail, client_list, create_project, project_list,project_detail
 #,include
 # from django.conf.urls import url
 # from .views import client_list, client_detail, project_create, project_list
@@ -32,7 +32,7 @@ urlpatterns = [
    
     path('clients/<int:pk>/',client_detail),
   
-    path('createpro/',create_projectiii)
+    path('createproject/',create_project)
   
   
   

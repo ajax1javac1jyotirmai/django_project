@@ -49,23 +49,8 @@ class ClientDetailSerializerget(serializers.ModelSerializer):
         fields = ['id', 'client_name','created_at','created_by','updated_at','projects']          
 
 
-class ProjectSerializer9(serializers.ModelSerializer):
-    #user = UserSerializer(many=True,read_only=True)
-    
-    # client_id= serializers.ReadOnlyField(source='client.client_id')
- 
 
-    class Meta:
-        model = Project
-        fields = ['id', 'project_name', 'client']
-
-
-class UserSerializer29(serializers.ModelSerializer):
-    class Meta:
-        model = User
-        fields = ['id', 'user_name']  # Include other user fields as needed
-
-class ProjectSerializer29(serializers.ModelSerializer):
+class ProjectSerializer_for_post(serializers.ModelSerializer):
     user = UserSerializer(many=True, read_only=True)
 
     class Meta:
